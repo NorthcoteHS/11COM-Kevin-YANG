@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>magic8balls</title>
+        
+        
+        <style type="text/css">
+            /* Your CSS goes here */
+        </style>
+    </head>
+
+    <body>
+        
+        <audio id="myAudio">
+            <source src="Cha_Ching.mp3" type="audio/mp3">
+        </audio>
+        <button form="image" id= myPic onclick="playAudio()">
+            <img src="8ball.jpg"/>
+        </button>
+        
+       
+        <h1>Ask a Magic8-ball a question</h1>
+        <script>
+            var x= document.getElementById("myAudio")
+            function playAudio(){
+                x.play();
+            }
+        </script>
+    </body>
+</html>
