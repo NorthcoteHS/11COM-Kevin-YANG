@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kevinHtmlCalculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+        <style type="text/css">
+            /* Your CSS goes here */
+        </style>
+    </head>
+
+    <body bgcolor=#009000 text="gold">
+        <form name="calculator">
+
+        number1<input type="text" id="number1"><br>
+        number2<input type="text" id="number2"><br>
+        operation<select id="options">
+            <option value="Plus">+</option>
+            <option value="Minus">-</option>
+            <option value="Divide">/</option>
+            <option value="Mutiply">*</option>
+            </select>
+        <button type="button" onclick="calculate()">calculate</button>
+        <p id = "result"></p>
+
+            </form>
+
+        // var number = new Number(1337);
+        // document.write (number.toString())
+
+        <script>
+
+            function calculate(){
+            var x = document.getElementById("number1").parseInt;
+            var y = document.getElementById("number2").parseInt;
+            var e = document.getElementById("options");
+            var op = e.options[e.selectedIndex].value;
+
+            if (op == "Plus") {
+                var result = x + y;
+             }
+            if (op == "Minus") {
+                var result = x - y;
+             }
+            if (op == "Mutiply") {
+                var result = x * y;
+             }
+            if (op == "Divide") {
+                var result = x / y;
+             }
+            document.getElementById("result").innerHTML = result;
+            }
+
+
+        </script>
+    </body>
+</html>
