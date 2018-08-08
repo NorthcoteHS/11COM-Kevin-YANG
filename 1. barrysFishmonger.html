@@ -14,13 +14,19 @@
     <body>
         <h1>For Normal customer</h1><br>
         weight(kg):<input id="kgNor" type="number" min="1" max="20"><br><br>
-        Fish type&nbsp;&nbsp;&nbsp;&nbsp;:<input id="fishType" type="number"><br><br>
+        Fish type&nbsp;&nbsp;&nbsp;&nbsp;:<select id="options">
+            <option value="9.8">Barramundi Wild</option>
+            <option value="10.99">Flathead Tails</option>
+            <option value="9.7">Rockling</option>
+            <option value="9.8">Snapper Fillets</option>
+            <option value="8.5">Gummy Shark(flake)</option>
+            </select> <br><br>
         &nbsp;&nbsp;&nbsp;<button onclick="generate()"><h5>generate</h5></button><br><br>
         Your total Price:<p id="resultNor"></p>
         
         <br><br><br><br><br><br><br><br><br><br>
         <h1>For business customer</h1>
-        weight(kg):<input id="kgCos" type="number"><br><br>
+        weight(kg):<input id="kgCos" type="number" min="1" max="20"><br><br>
         Fish type&nbsp;&nbsp;&nbsp;&nbsp;:<input id="fishType" type="number"><br><br>
          &nbsp;&nbsp;&nbsp;<button onclick="businessGenerate()"><h5>generate</h5></button><br><br>
         Your total Price:<p id="resultBus"></p>
