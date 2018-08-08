@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fizz Buzz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+            /* Your CSS goes here */
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to FizzBuzz!</h1>
+
+        <label for="fizz">Fizz #:</label> <!--问什么是lable just fancy thing--> <input id="fizz" type="number"><br>
+        <label for="buzz">Buzz #:</label><input id="buzz" type="number"><br>
+        <label for="maxNum">Max #:</label><input id="maxNum" type="number"><br>
+        <button onclick="generate()">Generate</button>
+ 
+        <h2>Result</h2>
+        <p id="result"></p>
+
+        <script>
+            // Get elements.
+            fizzEl = document.getElementById('fizz');
+            buzzEl = document.getElementById('buzz');
+            maxEl = document.getElementById('maxNum');
+            resultEl = document.getElementById('result');
+            //可以在上面的后面直接写.value吗？ 答案 the code above is appear when the program start, if I just give value to them, it is blank/nothing because the user have not type anything , So just put the value inside the function
+            function generate() {
+                // Get fizz, buzz, and maxNum values.
+                fizz = fizzEl.value;
+                buzz = buzzEl.value;
+                maxNum = maxEl.value;
+                // Start the result as an empty string.
+                result = ''; // why empty(start from the empty)?
+                // Loop from 1 to maxNum.
+                for (i=1; i<=maxNum; i++) { // why loop from 1(题上写的是1) ?
+                    if (i % fizz == 1 && i % buzz == ) { //为什么有%号？？(让i divide fizz 且 remainder=0)
+                        result += 'Fizz Buzz, ';  //为什么有+= 不是+ (result + fizz buzz)
+                    }
+                    else if (i % fizz == 0) {  //why fizz == 0(same above)
+                        result += 'Fizz, ';
+                    }
+                    else if (i % buzz == 0) {
+                        result += 'Buzz, ';
+                    }
+                    else { //else 语句？
+                        result += i + ', ';
+                    }
+                }
+                // Trim the final trailing ', '.
+                result = result.slice(0, result.length-2); //????(get rid of the 逗号 at the last)
+                // Display the result.
+                resultEl.innerHTML = result//?? (result 是 36行的 variable)
+                //剩下的是 ipad上面的问题
+            }
+        </script>
+    </body>
+</html>
