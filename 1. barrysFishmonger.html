@@ -34,24 +34,30 @@
             <option value="9.8">Snapper Fillets</option>
             <option value="8.5">Gummy Shark(flake)</option>
             </select><br><br>
-         &nbsp;&nbsp;&nbsp;<button onclick="businessGenerate()"><h5>generate</h5></button><br><br>
+         &nbsp;&nbsp;&nbsp;<button onclick= "businessGenerate()"><h5>generate</h5></button><h5>(will have a discount of 10 % of total price)</h5><br><br>
         Your total Price:<p id="resultBus"></p>
         
         
         
         <script>
            
-            var numberGet = document.getElementById('kgNor'); // 问有没有var 有什么区别
-            fishtypeGet = document.getElementById('wild');
+            numberGet = document.getElementById('kgNor'); //问问有没有var有啥区别
+            numberBusGet = document.getElementById('kgCos');
+            fishtypeGet = document.getElementById('options');
             resultNorJ = document.getElementById('resultNor');
+            resultBusJ = document.getElementById('resultBus');
            function generate(){
-               numberVal = numberGet.value; //error here
+               numberVal = numberGet.value; 
                fishtypeVal = fishtypeGet.value;
                var resultJ = numberVal * fishtypeVal;
                resultNorJ.innerHTML = resultJ;
-               
-               
-              
+           }
+            
+            function businessGenerate() {
+               numberVal = numberBusGet.value; 
+               fishtypeVal = fishtypeGet.value;
+               var resultJB = numberVal * fishtypeVal * 0.9;
+               resultBusJ.innerHTML = resultJB;
            }
         </script>
     </body>
