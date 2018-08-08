@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<input type = "number" id = "myNum">
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+
+
+
+
+
+
+
+    var myNumGet = document.getElementById('myNum');
+   function myFunction(){
+	var x="",i=1;
+    var myNumVal = myNumGet.value;
+	while (i<= myNumVal){
+		x=x + i + "times " + myNumVal + " is " + i*myNumVal +"<br>";
+		i++;
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

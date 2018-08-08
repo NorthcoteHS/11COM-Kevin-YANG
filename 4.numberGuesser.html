@@ -8,24 +8,22 @@
     </head>
     <body>
         <h1>Have a try !!!</h1>
-        <input type=number>
-        <button onclick="enter()">Enter</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <input type="number" min="0" max="999">
+        <button onclick="myfunction()">Enter</button>
+        <p id= "result">see if you get the right answer!</p>
 
         <script>
+
+            var numberGet = document.getElementById('number');
+            function myfunction(){
+                var x="",i=1;
+	            while (i<=10){
+                    if()
+		          x=x + "Your answer " + i + "<br>";
+		          i++;
+	            }
+	            document.getElementById("demo").innerHTML=x;
+            }
 
 
 

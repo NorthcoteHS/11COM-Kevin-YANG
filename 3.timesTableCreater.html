@@ -10,17 +10,25 @@
 
         <h1>Times Table Creator</h1><br><br><br><br><br>
         number box:<input id="numberBox" type="number" ><br><br>
-        calculation time:<input id="calTime" type="number"><br><br>
+        calculation time:<input id="calTime" type="number" max="10"><br><br>
         <button onclick="generate()">Generate</button><br><br>
         Result:<p id="result"></p>
 
         <script>
-
-
-
-
-
-
+            var numberBoxGet = document.getElementById('numberBox');
+            var calTimeGet = document.getElementById('calTime');
+            var resultGet = document.getElementById('result');
+            function generate(){
+                var numberBGval = numberBoxGet.value;
+                var calTGval = calTimeGet.value;
+                var x="",i=1;
+                var myNumVal = numberBoxGet.value;
+	               while (i<= calTGval){
+		              x=x + i + "times " + numberBGval + " is " + i*numberBGval +"<br>";
+		              i++;
+	               }
+                document.getElementById("result").innerHTML=x;
+            }
         </script>
     </body>
 </html>
