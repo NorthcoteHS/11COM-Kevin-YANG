@@ -6,24 +6,55 @@
         <style type="text/css">
         </style>
     </head>
-    <body>
+    <body bgcolor= #ccebff>
         <h1>Have a try !!!</h1>
-        <input type="number" min="0" max="999">
+        <br><br>
+        <input id = "number" type="number" min="0" max="999">
         <button onclick="myfunction()">Enter</button>
+        <p id = "randomNum"></p>
         <p id= "result">see if you get the right answer!</p>
+        <input type="reset" value = "reset">reset
+
 
         <script>
 
             var numberGet = document.getElementById('number');
+            var R = Math.floor((Math.random()*999)+1);
+            var guessCount = 1;
             function myfunction(){
-                var x="",i=1;
-	            while (i<=10){
-                    if()
-		          x=x + "Your answer " + i + "<br>";
-		          i++;
-	            }
-	            document.getElementById("demo").innerHTML=x;
+
+                //问老师 问什么设置不了最大值 （i的循环最大值）
+                var numberVal = numberGet.value;
+
+                //可以不用循环loop吗？
+                guessCount++;
+
+
+                    if (numberVal<R && guessCount<10){
+                        var x = "your answer is too low";
+                    }
+                    if (numberVal>R && guessCount<10){
+                        var x = "your answer is too high";
+                    }
+                    if (numberVal==R && guessCount<10){
+                        var x = "congratulations! your answer is correct! you Win!";
+                    }
+                    if( guessCount == 10){
+                        var x = "Sorry, you fail!";
+                    }
+                    if(guessCount>10){
+                        var x = "please don't try , the game is over ~~"
+                    }
+
+
+                document.getElementById("result").innerHTML = x;
+                document.getElementById("randomNum").innerHTML = R;
             }
+
+
+
+
+
 
 
 

@@ -8,8 +8,8 @@
     </head>
     <body>
         <h1>Fibonacci Sequence Generator</h1>
-        number1:<input id="kgCos" type="number"><br><br>
-        number2:<input id="kgCos" type="number"><br><br>
+        number1:<input id="number1" type="number"><br><br>
+        number2:<input id="number2" type="number"><br><br>
         <button onclick="generate()">Generate</button><br><br>
         result:<p id="result"></p>
 
@@ -28,6 +28,13 @@
 
 
         <script>
+            var number1Get = document.getElementById('number1');//可以写成双引号吗？
+            var number2Get = document.getElementById('number2');
+            function generate(){
+                var number1Val = number1Get.value;
+                var number2Val = number2Get.value;
+
+            }
 
 
 
