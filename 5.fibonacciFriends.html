@@ -6,7 +6,7 @@
         <style type="text/css">
         </style>
     </head>
-    <body>
+    <body bgcolor= #ccebff>
         <h1>Fibonacci Sequence Generator</h1>
         number1:<input id="number1" type="number"><br><br>
         number2:<input id="number2" type="number"><br><br>
@@ -30,9 +30,13 @@
         <script>
             var number1Get = document.getElementById('number1');//可以写成双引号吗？
             var number2Get = document.getElementById('number2');
+            var resultGet  = document.getElementById('result');
             function generate(){
-                var number1Val = number1Get.value;
-                var number2Val = number2Get.value;
+                var number1Val = parseFloat(number1Get.value);
+                var number2Val = parseFloat(number2Get.value);
+                var resultVal  = resultGet.value;
+                var resultVal  = number1Val+number2Val;
+                document.getElementById("result").innerHTML=resultVal;
 
             }
 
