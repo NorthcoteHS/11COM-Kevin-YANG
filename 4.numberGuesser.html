@@ -22,11 +22,12 @@
             var R = Math.floor((Math.random()*999)+1);
             var guessCount = 1;
             function myfunction(){
-
                 //问老师 问什么设置不了最大值 （i的循环最大值）
+
                 var numberVal = numberGet.value;
 
                 //可以不用循环loop吗？
+
                 guessCount++;
 
 
@@ -45,22 +46,9 @@
                     if(guessCount>10){
                         var x = "please don't try , the game is over ~~"
                     }
-
-
                 document.getElementById("result").innerHTML = x;
                 document.getElementById("randomNum").innerHTML = R;
             }
-
-
-
-
-
-
-
-
-
-
-
         </script>
     </body>
 </html>
