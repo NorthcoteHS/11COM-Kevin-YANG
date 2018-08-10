@@ -22,10 +22,10 @@
 
         <script>
             // Get elements.
-            fizzEl = document.getElementById('fizz');
-            buzzEl = document.getElementById('buzz');
-            maxEl = document.getElementById('maxNum');
-            resultEl = document.getElementById('result');
+            var fizzEl = document.getElementById('fizz');
+            var buzzEl = document.getElementById('buzz');
+            var maxEl = document.getElementById('maxNum');
+            var resultEl = document.getElementById('result');
             //可以在上面的后面直接写.value吗？ 答案 the code above is appear when the program start, if I just give value to them, it is blank/nothing because the user have not type anything , So just put the value inside the function
             function generate() {
                 // Get fizz, buzz, and maxNum values.
@@ -37,16 +37,16 @@
                 // Loop from 1 to maxNum.
                 for (i=1; i<=maxNum; i++) { // why loop from 1(题上写的是1) ?
                     if (i % fizz == 0 && i % buzz == 0 ) { //为什么有%号？？(让i divide fizz 且 remainder=0)
-                        result += 'Fizz Buzz, ';  //为什么有+= 不是+ (result + fizz buzz)
+                        result = result + 'Fizz Buzz, ';  //为什么有+= 不是+ (result + fizz buzz)
                     }
                     else if (i % fizz == 0) {  //why fizz == 0(same above)
-                        result += 'Fizz, ';
+                        result = result +  'Fizz, ';
                     }
                     else if (i % buzz == 0) {
-                        result += 'Buzz, ';
+                        result = result + 'Buzz, ';
                     }
                     else { //else 语句？
-                        result += i + ', ';
+                        result = result + i + ', ';
                     }
                 }
                 // Trim the final trailing ', '.

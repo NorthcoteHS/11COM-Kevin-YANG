@@ -12,19 +12,17 @@
         number box:<input id="numberBox" type="number" ><br><br>
         calculation time:<input id="calTime" type="number" max="10"><br><br> <!--为什么 max = 10 is not working-->
         <button onclick="generate()">Generate</button><br><br>
-        <p id="randomNum"></p>
+
         Result:<p id="result"></p>
 
         <script>
             var numberBoxGet = document.getElementById('numberBox');
             var calTimeGet = document.getElementById('calTime');
             var resultGet = document.getElementById('result');
-            var randomGet = document.getElementById('randomNum');
             function generate(){
                 var numberBGval = numberBoxGet.value;
                 var calTGval = calTimeGet.value;
                 var x="",i=1;
-                var myNumVal = numberBoxGet.value;
 	               while (i<= calTGval){
 		              x=x + i + "times " + numberBGval + " is " + i*numberBGval +"<br>";
 		              i++;
