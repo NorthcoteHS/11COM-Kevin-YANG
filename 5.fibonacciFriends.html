@@ -27,6 +27,7 @@
 
 
 
+
         <script>
             var number1Get = document.getElementById('number1');//可以写成双引号吗？
             var number2Get = document.getElementById('number2');
@@ -34,9 +35,17 @@
             function generate(){
                 var number1Val = parseFloat(number1Get.value);
                 var number2Val = parseFloat(number2Get.value);
+                //此处转intergal有问题
                 var resultVal  = resultGet.value;
                 var resultVal  = number1Val+number2Val;
-                document.getElementById("result").innerHTML=resultVal;
+
+                var i = 0; var x = "";
+                while (number1Val < 100){
+                    x = x + number1Val + number2Val + "  " ; // 此处公式有问题
+
+
+                }
+                document.getElementById("result").innerHTML= x ;
 
             }
 
