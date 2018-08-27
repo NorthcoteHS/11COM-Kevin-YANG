@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YOUR TITLE GOES HERE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+        </style>
+    </head>
+    <body bgcolor= #ccebff>
+        <h1>Have a try !!!</h1>
+        <br><br>
+        <input id = "number" type="number" min="0" max="999">
+        <button id = "myBtn"onclick="myfunction()">Enter</button>
+        <p id = "randomNum"></p>
+        <p id= "result">see if you get the right answer!</p><br>
+        <p id = "time"></p>
+        if the game is over , please click the refresh button on chrome to reset ~~
+
+        <script>
+
+            var numberGet = document.getElementById('number');
+            var R = Math.floor((Math.random()*999)+1);
+            var guessCount = 1;
+            document.getElementById("reset").onclick = function reset() {
+
+                document.getElementById("myBtn").disabled = false;
+                document.getElementById("number").disabled = false;
+
+
+            };
+
+            function myfunction(){
+
+
+                var numberVal = numberGet.value;
+
+
+
+                guessCount++;
+                    if (guessCount == 2 ){
+                        var y = "you have guessed for one time";
+                    }
+                    if (guessCount == 3 ){
+                        var y = "you have guessed for two time";
+                    }
+                    if (guessCount == 4 ){
+                        var y = "you have guessed for three time";
+                    }
+                    if (guessCount == 5 ){
+                        var y = "you have guessed for four time";
+                    }
+                    if (guessCount == 6 ){
+                        var y = "you have guessed for five time";
+                    }
+                    if (guessCount == 7 ){
+                        var y = "you have guessed for six time";
+                    }
+                    if (guessCount == 8 ){
+                        var y = "you have guessed for seven time";
+                    }
+                    if (guessCount == 9 ){
+                        var y = "you have guessed for eight time";
+                    }
+                    if (guessCount == 10 ){
+                        var y = "you have guessed for nine time";
+                    }
+                    if (guessCount == 11 ){
+                        var y = "you have guessed for ten time, your chances are run out , please click the refresh button to reset";
+                    }
+
+
+
+
+                    if (numberVal<R && guessCount<10){
+                        var x = "your answer is too low";
+                    }
+                    if (numberVal>R && guessCount<10){
+                        var x = "your answer is too high";
+                    }
+                    if (numberVal==R && guessCount<10){
+                        var x = "congratulations! your answer is correct! you Win!";
+                    }
+                    if( guessCount == 10){
+                        var x = "Sorry, you fail!";
+                    }
+                    if(guessCount>10){
+                        var x = "please don't try , the game is over ~~"
+                        document.getElementById("myBtn").disabled = true;
+                        document.getElementById("number").disabled = true;
+                    }
+                document.getElementById("result").innerHTML = x;
+                document.getElementById("time").innerHTML = y;
+            }
+        </script>
+    </body>
+</html>

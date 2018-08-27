@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YOUR TITLE GOES HERE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+        </style>
+    </head>
+    <body bgcolor= darkgreen>
+        <h1>Warrior, Please Collect Your Weapons!</h1>
+        <p>(click roll to pick your weapon~)</p>
+        <br><br>
+        <button id = "button" onclick="roll()" color = red ><h3>Roll!</h3></button><br><br>
+        Congratulations! You rolled :<p id="numberRoll"></p><br><br><br><br><br><br>
+
+        <h3> Your Inventory:</h3><br><p id = "inventory"></p><br><br><br><br><br><br><br>
+        What happen if you dislike your weapons? <br><br>
+        Don't worry. Click the <button id="reset" onclick="window.location.reload()">Reset</button> to reset
+
+
+
+        <script>
+            var numberRollGet = document.getElementById('numberRoll');
+            var inventoryGet  = document.getElementById('inventory');
+            var x = ''; var numberClick = 0 ;
+
+            function roll(){
+                numberClick++;
+                var numberVal = Math.floor((Math.random()*25)+1);
+                var inventVal = inventoryGet.value;
+                if (numberClick == 5){
+                    window.alert("you have select your five weapons!");
+                    document.getElementById("button").disabled = true;
+                }
+                if (numberVal == 1){
+                  x = x + "Boardsword, ";
+                    }
+                else if (numberVal == 2){
+                  x = x + "Shield, ";
+                    }
+                else if (numberVal == 3){
+                  x = x + "Helmet, ";
+                    }
+                else if (numberVal == 4){
+                  x = x + "Rope, ";
+                    }
+                else if (numberVal == 5){
+                  x = x + "Battle Axe, ";
+                    }
+                else if (numberVal == 6){
+                  x = x + "Dagger, ";
+                    }
+                else if (numberVal == 7){
+                  x = x + "Net, ";
+                    }
+                else if (numberVal == 8){
+                  x = x + "Sica, ";
+                    }
+                else if (numberVal == 9){
+                  x = x + "Scythe, ";
+                    }
+                else if (numberVal == 10){
+                  x = x + "Spear, ";
+                    }
+                else if (numberVal == 11){
+                  x = x + "Mask, ";
+                    }
+                else if (numberVal == 12){
+                  x = x + "Chest Plate, ";
+                    }
+                else if (numberVal == 13){
+                  x = x + "Boots, ";
+                    }
+                else if (numberVal == 14){
+                  x = x + "Backpack, ";
+                    }
+                else if (numberVal == 15){
+                  x = x + "Chain, ";
+                    }
+                else if (numberVal == 16){
+                  x = x + "Mace, ";
+                    }
+                else if (numberVal == 17){
+                  x = x + "Gloves, ";
+                    }
+                else if (numberVal == 18){
+                  x = x + "Chain mail, ";
+                    }
+                else if (numberVal == 19){
+                  x = x + "Bow & Arrows, ";
+                    }
+                else if (numberVal == 20){
+                  x = x + "Crossbow, ";
+                    }
+                else if (numberVal == 21){
+                  x = x + "Bear Claw, ";
+                    }
+                else if (numberVal == 22){
+                  x = x + "Scimitar, ";
+                    }
+                else if (numberVal == 23){
+                  x = x + "Longsword, ";
+                    }
+                else if (numberVal == 24){
+                  x = x + "Samurai Sword , ";
+                    }
+                else if (numberVal == 25){
+                  x = x + "Pike, ";
+                    }
+
+                document.getElementById("numberRoll").innerHTML = numberVal;
+                document.getElementById("inventory").innerHTML = x;
+            }
+
+
+
+
+
+        </script>
+    </body>
+</html>

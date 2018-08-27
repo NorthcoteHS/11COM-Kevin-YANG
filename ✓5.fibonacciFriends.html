@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YOUR TITLE GOES HERE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+        </style>
+    </head>
+    <body bgcolor= #ccebff>
+        <h1>Fibonacci Sequence Generator</h1>
+        number1:<input id="number1" type="number"><br><br>
+        number2:<input id="number2" type="number"><br><br>
+        how many times do you want to show as output by using the fibonacci sequence:<br><br><input id="showTime" type="number"><br><br>
+        <button onclick="generate()">Generate</button><br><br>
+        result:<p id="result"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            var number1Get = document.getElementById("number1");//可以写成双引号吗？
+            var number2Get = document.getElementById("number2");
+            var resultGet  = Number(document.getElementById("result"));
+            var showGet = document.getElementById("showTime");
+            var realOneGet = document.getElementById("number1");
+            var realTwoGet = document.getElementById("number2");
+            function generate(){
+                var number1Val = parseInt(number1Get.value);
+                var number2Val = parseInt(number2Get.value);
+                var realOneVal = realOneGet.value;
+                var realTwoVal = realTwoGet.value;
+                var resultVal  = resultGet.value;
+                var showVal    = showGet.value;
+                var number3Val;
+                var x = "";
+                if (showVal < 0 ){
+                    alert("You can't put negative number here!");
+
+                }
+
+
+                for (var i = 0 ; i < showVal; i++){
+                   number3Val = number1Val + number2Val;
+                   number1Val = number2Val;
+                   number2Val = number3Val;
+                   x = x + number3Val+" ，";
+
+
+                }
+                // the most important part because it tells the computer how to create "fibonacci" mind in its head. This part become a loop that each three variable take place of others in a loop be able to make a fibonacci senquence.
+
+
+                document.getElementById("result").innerHTML=realOneVal + " , " + realTwoVal + " , " + x;
+
+
+            }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
